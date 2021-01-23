@@ -1,7 +1,9 @@
+// https://github.com/axiomdin/assignment3/blob/main/assignment.js
+
 //1. kilometerToMeter function
 function kilometerToMeter(kilometer) {
-    if (kilometer <= 0) {
-        return "Enter a positive value" //throwing an error
+    if (kilometer < 0) {
+        return "Enter a positive value" //throw an error
     } 
         return kilometer * 1000;
 }
@@ -14,13 +16,13 @@ function kilometerToMeter(kilometer) {
 //2. budgetCalculator function
 function budgetCalculator(watch, phone, laptop) {
     if (watch < 0 || phone < 0 || laptop < 0) {
-        return "Enter a positive value" //throwing an error
+        return "Enter a positive value" //throw an error
     } 
         var watchPrice = watch * 50;
         var phonePrice = phone * 100;
         var laptopPrice = laptop * 500;
-        var total = watchPrice + phonePrice + laptopPrice;
-        return total;
+        var totalPrice = watchPrice + phonePrice + laptopPrice;
+        return totalPrice;
 }
 
 // var result2 = budgetCalculator(10, 5, 2)
@@ -32,7 +34,7 @@ function budgetCalculator(watch, phone, laptop) {
 function hotelCost(day) {
     var totalCost = 0;
     if (day < 0) {
-        return "please Enter a valid amount of day"; //throwing an error
+        return "Enter a valid number"; //throw an error
     } else if (day <= 10) {
         totalCost = day * 100;
     } else if (day <= 20) {
